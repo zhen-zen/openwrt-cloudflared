@@ -41,7 +41,7 @@ jobs:
             FIRST=0
 
             JSON="$JSON"'{"arch":"'"$ARCH"'","ref":"'"$REF"'"}'
-          done <<< $(perl ./scripts/dump-target-info.pl architectures 2>/dev/null)
+          done <<< $(perl ./scripts/dump-target-info.pl architectures 2>/dev/null | grep aarch64)
 
           JSON="$JSON"']'
           echo -e "\n---- sdks ----\n"
